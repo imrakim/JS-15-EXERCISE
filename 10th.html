@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div style="margin-top:15% ; margin-bottom: 15%; margin-left: 40%;"">
+        <label for="">1st Number</label>
+        <input type="text" id="one" size="22">
+        <br>
+        <br>
+        <label for="">2nd Number</label>
+        <input type="text" id="two" size="21">
+        <br>
+        <br>
+        <button onclick="multiplay().value">Multiplay</button>
+
+        <button onclick="divideby().value">Divide</button>
+
+        <p>Result:</p>
+        <span id="result"></span>
+
+    </div>
+
+
+    <script>
+        function multiplay() {
+            let num1 = document.querySelector('#one').value;
+            let num2 = document.querySelector('#two').value;
+            document.getElementById('result').innerHTML = num1 * num2;
+        }
+        function divideby() {
+            let num1 = document.getElementById('one').value;
+            let num2 = document.getElementById('two').value;
+            document.getElementById('result').innerHTML = num1 / num2;
+        }
+
+    </script>
+</body>
+
+</html>
