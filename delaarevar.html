@@ -9,6 +9,7 @@
 
 <body>
 
+    <span id="result"></span>
 
 
 
@@ -16,7 +17,8 @@
         let name = 'anything';
         let n = 100;
         this[name] = n;
-        console.log(this[name] = n);
+        // console.log(this[name] = n);
+        document.querySelector('#result').innerHTML = this[name] = n;
     </script>
 </body>
 
