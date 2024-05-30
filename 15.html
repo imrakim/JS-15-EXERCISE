@@ -10,17 +10,42 @@
 <body>
 
 
+    <h3 id="rakim"></h3>
+
     <script>
+        // let  ppm= prompt('Enter e number');
+        // console.log();
+
+        // function diffrence(R) {
+        //     if (R <= 13) {
+        //         return 13 - R;
+        //     }
+        //     else {
+        //         return (R - 13) * 2;
+        //     }
+        // }
+        
+
+
+        let ppm = prompt('Enter a number');
+
+        
+        ppm = Number(ppm);
+
+        
         function diffrence(R) {
             if (R <= 13) {
                 return 13 - R;
-            }
-            else {
+            } else {
                 return (R - 13) * 2;
             }
         }
-        console.log(diffrence(32));
-        console.log(diffrence(11));
+
+
+        let result = diffrence(ppm);
+
+
+      document.getElementById('rakim').innerHTML=result;
 
 
     </script>
