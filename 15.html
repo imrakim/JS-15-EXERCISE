@@ -24,15 +24,11 @@
         //         return (R - 13) * 2;
         //     }
         // }
-        
+
 
 
         let ppm = prompt('Enter a number');
-
-        
         ppm = Number(ppm);
-
-        
         function diffrence(R) {
             if (R <= 13) {
                 return 13 - R;
@@ -40,14 +36,8 @@
                 return (R - 13) * 2;
             }
         }
-
-
         let result = diffrence(ppm);
-
-
-      document.getElementById('rakim').innerHTML=result;
-
-
+        document.getElementById('rakim').innerHTML = result;
     </script>
 </body>
 
