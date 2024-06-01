@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        function addPyPrefix(str) {
+            if (str.startsWith("Py")) {
+                return str;
+            } else {
+                return "Py" + str;
+            }
+        }
+
+        const string1 = "thon"
+
+        console.log(addPyPrefix(string1));
+    </script>
+</body>
+
+</html>
