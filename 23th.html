@@ -11,14 +11,13 @@
 
 
     <script>
-        function changestr() {
-            let cng = 'Rakim Ali'
-            let value = cng[0];
-            let a = value;
-            return a
-
+        function change(str) {
+          let num1 = str.charAt(0);
+          let num2 = str.charAt(str.length-1);
+          let num3 = str.substring(1, str.length -1);
+          return num2+num3+num1;
         }
-        console.log(changestr());
+        console.log(change('hello'));
     </script>
 </body>
 
