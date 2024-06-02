@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function givenString(str) {
+            let newstr = str.charAt(str.length - 1);
+            let newNum = str.charAt(str.length - 2);
+            let newNum1 = str.charAt(str.length - 3);
+            let adding = newNum1 + newNum + newstr;
+            return adding + str;
+
+        }
+        console.log(givenString('Hello Odd Javascript'));
+    </script>
+</body>
+
+</html>
