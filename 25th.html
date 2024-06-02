@@ -10,14 +10,16 @@
 <body>
 
 
-    <script>
-        function anotherString(asT) {
-            let string1 = asT.charAt(0);
-            let newStr = string1 + asT;
-            return newStr;
-        }
 
-        console.log(anotherString('Rakim'));
+    <script>
+        function givenNumber(num) {
+            if (num % 3 == 0 || num % 7 == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        console.log(givenNumber(12));
     </script>
 </body>
 
