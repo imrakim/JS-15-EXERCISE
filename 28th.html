@@ -15,13 +15,13 @@
     <script>
 
         function integer(x, y) {
-            if ((x >= 50 && y <= 99) || (x >= 50 && y <= 99)) {
+            if ((x >= 50 && x <= 99) || (y >= 10 && y <= 99)) {
                 return true
             } else {
                 return false
             }
         }
-        let result = document.getElementById('result').innerHTML = integer(50, 10);
+        let result = document.getElementById('result').innerHTML = integer(15, 99);
 
     </script>
 </body>

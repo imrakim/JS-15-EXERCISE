@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <h1 id="result"></h1>
 
     <script>
-        
+        function integer(x, y, z) {
+            if ((x >= 50 && x <= 99) || (y >= 50 && y <= 99) || (z >= 50 && z <= 99)) {
+                return true
+            } else {
+                false
+            }
+        }
+        let checkNum = document.getElementById('result').innerText = integer(51, 5, 199)
     </script>
 </body>
+
 </html>
