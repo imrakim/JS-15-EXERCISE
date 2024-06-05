@@ -9,20 +9,20 @@
 
 <body>
 
-    <p id="result"></p>
+    <p id="result" style="margin: 50px; color: crimson;font-size: 30px;"></p>
 
 
     <script>
 
         function integer(x, y) {
-            if (x >= 50 && y <= 80) {
+            if ((x >= 50 && y <= 99) || (x >= 50 && y <= 99)) {
                 return true
             } else {
                 return false
             }
         }
-        let result = document.getElementById('result').innerHTML=integer(50,60);
-       
+        let result = document.getElementById('result').innerHTML = integer(50, 10);
+
     </script>
 </body>
 
