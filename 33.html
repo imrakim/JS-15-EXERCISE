@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="displayAlert"></div>
+
+    <script>
+        const Shuma = {
+            Limitless: {
+                alert: function (definition) {
+                    let alertContainer = document.getElementById(definition.target);
+                    if (!alertContainer) {
+                        console.error(`Target element with ID "${definition.target}" not found.`);
+                        return;
+                    }
+
+                    let alertStructure = this.build(definition.type);
+
+                    let message = this.message(definition.message);
+                    alertStructure.appendChild(message);
+
+                    let close = this.close();
+                    alertStructure.appendChild(close);
+
+                    alertContainer.appendChild(alertStructure);
+                },
+
+                build: function (type) {
+                    let alertStructure = document.createElement("DIV");
+                    alertStructure.classList.add("alert", `alert-${type}`, "border-0");
+                    alertStructure.setAttribute("role", "alert");
+
+                    return alertStructure;
+                },
+
+                message: function (message) {
+                    let msg = document.createElement("SPAN");
+
+                    let parser = new DOMParser();
+                    let doc = parser.parseFromString(message, "text/html");
+
+                    let childNodes = doc.body.childNodes;
+
+                    childNodes.forEach((node) => {
+                        msg.appendChild(node.cloneNode(true));
+                    });
+
+                    return msg;
+                },
+
+                close: function () {
+                    let btnElement = document.createElement("BUTTON");
+                    btnElement.className = "close";
+                    btnElement.setAttribute("type", "button");
+                    btnElement.setAttribute("data-dismiss", "alert");
+
+                    let btnSpanElement = document.createElement("SPAN");
+                    btnSpanElement.innerHTML = "&times;";
+                    btnElement.appendChild(btnSpanElement);
+
+                    return btnElement;
+                },
+            },
+        };
+
+        const Danger = {
+            target: "displayAlert",
+            type: "danger",
+            message: '<span class="font-weight-semibold">Oh snap!</span> Change a few things up and <a href="#" class="alert-link">try submitting again</a>.',
+        };
+
+        const Primary = {
+            target: "displayAlert",
+            type: "primary",
+            message: "a primary message goes here",
+        };
+
+        const Success = {
+            target: "displayAlert",
+            type: "success",
+            message: "a success message goes here",
+        };
+
+        const Warning = {
+            target: "displayAlert",
+            type: "warning",
+            message: "a warning message goes here",
+        };
+
+        const Info = {
+            target: "displayAlert",
+            type: "info",
+            message: "an info message goes here",
+        };
+
+        Shuma.Limitless.alert(Danger);
+        Shuma.Limitless.alert(Success);
+        Shuma.Limitless.alert(Primary);
+        Shuma.Limitless.alert(Warning);
+        Shuma.Limitless.alert(Info);
+    </script>
+</body>
+</html>
